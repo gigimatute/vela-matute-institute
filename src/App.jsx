@@ -360,8 +360,8 @@ export default function App() {
 
       <div style={{height: '1px', background: 'var(--line)', margin: '26px 0'}}></div>
 
-      <div className="founder-name" data-es>Dra. Giulliana Matute</div>
-      <div className="founder-name" data-en>Dr. Giulliana Matute</div>
+      <div className="founder-name" data-es>Dra. Guilliana Matute</div>
+      <div className="founder-name" data-en>Dr. Guilliana Matute</div>
       <div className="founder-role" data-es>Directora Internacional de la Cátedra</div>
       <div className="founder-role" data-en>International Director of the Chair</div>
       <div className="founder-bio">
@@ -382,10 +382,10 @@ export default function App() {
       <h2 style={{marginTop: '12px', fontSize: 'clamp(1.6rem,2.6vw,2.1rem)'}} data-es>De un salón de clases a millones de hogares</h2>
       <h2 style={{marginTop: '12px', fontSize: 'clamp(1.6rem,2.6vw,2.1rem)'}} data-en>From a classroom to millions of homes</h2>
       <p style={{color: 'var(--parchment-dim)', marginTop: '20px', fontSize: '0.98rem'}} data-es>
-        Durante décadas, el Profesor Matute formó a generaciones de estudiantes en Venezuela desde las aulas. Ahora, junto a la Dra. Giulliana Matute como Directora Internacional de la Cátedra, ese mismo conocimiento llega —gratis, bilingüe, y accesible desde cualquier lugar— a las comunidades de Estados Unidos donde el consumo de drogas y alcohol afecta a tantas familias, muchas de ellas hispanohablantes que no encuentran recursos en su propio idioma.
+        Durante décadas, el Profesor Matute formó a generaciones de estudiantes en Venezuela desde las aulas. Ahora, junto a la Dra. Guilliana Matute como Directora Internacional de la Cátedra, ese mismo conocimiento llega —gratis, bilingüe, y accesible desde cualquier lugar— a las comunidades de Estados Unidos donde el consumo de drogas y alcohol afecta a tantas familias, muchas de ellas hispanohablantes que no encuentran recursos en su propio idioma.
       </p>
       <p style={{color: 'var(--parchment-dim)', marginTop: '20px', fontSize: '0.98rem'}} data-en>
-        For decades, Professor Matute trained generations of students across Venezuela from the classroom. Now, alongside Dr. Giulliana Matute as International Director of the Chair, that same knowledge reaches — free, bilingual, and accessible from anywhere — communities across the United States where drug and alcohol use affects so many families, many of them Spanish-speaking and without resources in their own language.
+        For decades, Professor Matute trained generations of students across Venezuela from the classroom. Now, alongside Dr. Guilliana Matute as International Director of the Chair, that same knowledge reaches — free, bilingual, and accessible from anywhere — communities across the United States where drug and alcohol use affects so many families, many of them Spanish-speaking and without resources in their own language.
       </p>
       <div className="founder-quote" style={{marginTop: '32px'}}>
         <span data-es>"¡Sigamos trabajando en un mundo libre de drogas, desde el ámbito educativo!"</span>
@@ -448,8 +448,8 @@ export default function App() {
 
 <footer>
   <div className="wrap footer-row">
-    <p data-es>&copy; 2026 Vela Matute Institute — Un proyecto de Vela Salud, junto al Profesor Hernán Matute y la Dra. Giulliana Matute.</p>
-    <p data-en>&copy; 2026 Vela Matute Institute — A Vela Salud project, together with Professor Hernán Matute and Dr. Giulliana Matute.</p>
+    <p data-es>&copy; 2026 Vela Matute Institute — Un proyecto de Vela Salud, junto al Profesor Hernán Matute y la Dra. Guilliana Matute.</p>
+    <p data-en>&copy; 2026 Vela Matute Institute — A Vela Salud project, together with Professor Hernán Matute and Dr. Guilliana Matute.</p>
   </div>
 </footer>
 
