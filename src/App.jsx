@@ -128,7 +128,7 @@ export default function App() {
       <a href="#biblioteca" data-es>Biblioteca</a><a href="#biblioteca" data-en>Library</a>
       <a href="#modulos" data-es>Módulos</a><a href="#modulos" data-en>Modules</a>
       <a href="#recursos" data-es>Recursos</a><a href="#recursos" data-en>Resources</a>
-      <a href="#internacional" data-es>Internacional</a><a href="#internacional" data-en>International</a>
+      <a href="#alcance" data-es>Nuestro Alcance</a><a href="#alcance" data-en>Our Reach</a>
       <a href="#catedra" data-es>La Cátedra</a><a href="#catedra" data-en>The Chair</a>
     </nav>
   </div>
@@ -176,11 +176,6 @@ export default function App() {
       <div className="stat-num">23 <span data-es>años</span><span data-en>years</span></div>
       <div className="stat-label" data-es>CLIAD-UPEL-IPC, fundada el 25 de octubre de 2003</div>
       <div className="stat-label" data-en>CLIAD-UPEL-IPC, founded October 25, 2003</div>
-    </div>
-    <div>
-      <div className="stat-num">2 <span data-es>países</span><span data-en>countries</span></div>
-      <div className="stat-label" data-es>CLIAD Venezuela y su filial en Argentina</div>
-      <div className="stat-label" data-en>CLIAD Venezuela and its Argentina chapter</div>
     </div>
     <div>
       <div className="stat-num">100% <span data-es>gratis</span><span data-en>free</span></div>
@@ -403,28 +398,28 @@ export default function App() {
   </div>
 </section>
 
-<section id="internacional" style={{background: 'var(--ink-deep)', borderTop: '1px solid var(--line)', borderBottom: '1px solid var(--line)'}}>
+<section id="alcance" style={{background: 'var(--ink-deep)', borderTop: '1px solid var(--line)', borderBottom: '1px solid var(--line)'}}>
   <div className="wrap">
     <div className="section-head">
-      <p className="eyebrow" data-es>Presencia internacional</p>
-      <p className="eyebrow" data-en>International presence</p>
-      <h2 data-es>De Caracas al Cono Sur</h2>
-      <h2 data-en>From Caracas to the Southern Cone</h2>
-      <p data-es>La Cátedra Libre Antidrogas (CLIAD) nació en la Universidad Pedagógica Experimental Libertador, Instituto Pedagógico de Caracas (UPEL-IPC), y ya tiene su primera filial fuera de Venezuela.</p>
-      <p data-en>The Cátedra Libre Antidrogas (CLIAD) was founded at the Universidad Pedagógica Experimental Libertador, Instituto Pedagógico de Caracas (UPEL-IPC), and it now has its first chapter outside Venezuela.</p>
+      <p className="eyebrow" data-es>Nuestro enfoque</p>
+      <p className="eyebrow" data-en>Our focus</p>
+      <h2 data-es>De Caracas a las comunidades de Estados Unidos</h2>
+      <h2 data-en>From Caracas to communities across the United States</h2>
+      <p data-es>La Cátedra Libre Antidrogas (CLIAD) nació en la Universidad Pedagógica Experimental Libertador, Instituto Pedagógico de Caracas (UPEL-IPC), y hoy dirige su misión educativa a las comunidades hispanohablantes de Estados Unidos.</p>
+      <p data-en>The Cátedra Libre Antidrogas (CLIAD) was founded at the Universidad Pedagógica Experimental Libertador, Instituto Pedagógico de Caracas (UPEL-IPC), and today it directs its educational mission to Spanish-speaking communities across the United States.</p>
     </div>
     <div className="resources">
       <div className="res-card">
-        <h3 data-es>CLIAD Venezuela — Sede fundadora</h3>
-        <h3 data-en>CLIAD Venezuela — Founding chapter</h3>
+        <h3 data-es>CLIAD — Sede fundadora</h3>
+        <h3 data-en>CLIAD — Founding home</h3>
         <p data-es>Universidad Pedagógica Experimental Libertador, Instituto Pedagógico de Caracas (UPEL-IPC). Sede de la Actividad de Extensión Acreditable "Las drogas y su prevención desde el ámbito educativo", coordinada por el Prof. Hernán Matute Brouzés.</p>
         <p data-en>Universidad Pedagógica Experimental Libertador, Instituto Pedagógico de Caracas (UPEL-IPC). Home of the accredited extension course "Drugs and Their Prevention in Education," coordinated by Prof. Hernán Matute Brouzés.</p>
       </div>
       <div className="res-card">
-        <h3 data-es>CLIAD Argentina — Nueva filial</h3>
-        <h3 data-en>CLIAD Argentina — New chapter</h3>
-        <p data-es>Universidad Nacional de la Patagonia Austral, Unidad Académica Caleta Olivia (Santa Cruz). Autorizada por sus autoridades universitarias y coordinada por el Prof. Bartolomé Ramírez, Psicólogo. Cada junio, Mes Internacional de la Lucha contra las Drogas, se organizan jornadas de "Lazos Azules" y "Territorios Libres de Drogas".</p>
-        <p data-en>Universidad Nacional de la Patagonia Austral, Caleta Olivia Academic Unit (Santa Cruz). Authorized by its university leadership and coordinated by Prof. Bartolomé Ramírez, Psychologist. Every June, International Month Against Drug Abuse, the chapter organizes "Blue Ribbon" and "Drug-Free Territory" campaigns.</p>
+        <h3 data-es>Vela Matute Institute — Puente a Estados Unidos</h3>
+        <h3 data-en>Vela Matute Institute — A bridge to the United States</h3>
+        <p data-es>Bajo la dirección internacional de la Dra. Giulliana Matute, el Instituto lleva el trabajo académico de CLIAD a familias hispanohablantes en Estados Unidos, en un formato gratuito y bilingüe.</p>
+        <p data-en>Under the international direction of Dr. Giulliana Matute, the Institute brings CLIAD's academic work to Spanish-speaking families in the United States, in a free, bilingual format.</p>
       </div>
     </div>
   </div>
