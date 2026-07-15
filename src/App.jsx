@@ -4,7 +4,7 @@ const SHEET_ID = ""; // <-- pega aquí el ID de tu Google Sheet cuando lo tengas
 
 const defaultDistinciones = [
   { es: "Doctorado Honoris Causa, otorgado por unanimidad del Consejo Universitario de la UPEL (6 de julio de 2024)", en: "Doctorate Honoris Causa, awarded unanimously by UPEL's University Council (July 6, 2024)" },
-  { es: "Récord Guinness por su cátedra universitaria", en: "Guinness World Record for his university course" },
+  { es: "Reconocido por instituciones internacionales como el único con casi 300 sesiones de educación continua sobre prevención de una vida libre de drogas y alcohol", en: "Recognized by international institutions as the only one with nearly 300 continuing-education sessions on preventing drug and alcohol addiction" },
   { es: "Premio \"Buen Ciudadano\" — Concejo del Municipio Bolivariano Libertador", en: "\"Good Citizen\" Award — Municipal Council of Bolivarian Libertador" },
   { es: "Distinción Académica en Participación Ciudadana — Evento CLIAD N° 233", en: "Academic Distinction in Civic Participation — CLIAD Event No. 233" },
   { es: "Reconocimiento del Concejo Municipal de Baruta — Charla N° 200", en: "Recognition from the Baruta Municipal Council — 200th talk" },
@@ -42,6 +42,13 @@ const defaultBiblioteca = [
     titulo_en: "A call to double prevention funding",
     texto_es: "En declaraciones a la prensa (2013), el Prof. Matute Brouzés propuso duplicar el financiamiento de los programas de prevención de drogas en Venezuela, señalando que la labor de CLIAD-UPEL-IPC en esta línea llevaba ya más de una década, y pidiendo extender la atención al sector laboral juvenil, comunal y de padres y representantes.",
     texto_en: "In press statements (2013), Prof. Matute Brouzés proposed doubling the funding for drug-prevention programs in Venezuela, noting that CLIAD-UPEL-IPC's work on this front was already over a decade old, and calling for expanded outreach to young workers, communities, and parents."
+  },
+  {
+    badgeClass: "live", badge_es: "Mencionado en prensa", badge_en: "Covered in the press",
+    titulo_es: "Entrevista en Globovisión: adicciones y ansiedad tras el terremoto",
+    titulo_en: "Globovisión interview: addiction and anxiety after the earthquake",
+    texto_es: "El Prof. Matute Brouzés fue entrevistado por Globovisión, canal nacional de Venezuela, para hablar sobre cómo enfrentar el riesgo de consumo de drogas y alcohol derivado de la ansiedad tras el terremoto que afectó al país.",
+    texto_en: "Prof. Matute Brouzés was interviewed by Globovisión, Venezuela's national television channel, about addressing the risk of drug and alcohol use stemming from the anxiety caused by the earthquake that struck the country."
   },
 ];
 
@@ -161,14 +168,14 @@ export default function App() {
 <div className="stats">
   <div className="wrap stats-row">
     <div>
-      <div className="stat-num">200+ <span data-es>charlas</span><span data-en>talks</span></div>
-      <div className="stat-label" data-es>dictadas por el Prof. Matute a la fecha</div>
-      <div className="stat-label" data-en>delivered by Prof. Matute to date</div>
+      <div className="stat-num">~300 <span data-es>sesiones</span><span data-en>sessions</span></div>
+      <div className="stat-label" data-es>de educación continua dictadas por el Prof. Matute</div>
+      <div className="stat-label" data-en>continuing-education sessions delivered by Prof. Matute</div>
     </div>
     <div>
-      <div className="stat-num">10+ <span data-es>años</span><span data-en>years</span></div>
-      <div className="stat-label" data-es>de trayectoria de CLIAD hacia 2013</div>
-      <div className="stat-label" data-en>of CLIAD's work as of 2013</div>
+      <div className="stat-num">23 <span data-es>años</span><span data-en>years</span></div>
+      <div className="stat-label" data-es>CLIAD-UPEL-IPC, fundada el 25 de octubre de 2003</div>
+      <div className="stat-label" data-en>CLIAD-UPEL-IPC, founded October 25, 2003</div>
     </div>
     <div>
       <div className="stat-num">2 <span data-es>países</span><span data-en>countries</span></div>
@@ -354,14 +361,14 @@ export default function App() {
       </ul>
 
       <div className="founder-bio">
-        <p data-es>Profesor Emérito de la Universidad Pedagógica Experimental Libertador, Instituto Pedagógico de Caracas (UPEL-IPC), donde funda y coordina la Cátedra Libre Antidrogas (CLIAD) y la Actividad de Extensión Acreditable "Las drogas y su prevención desde el ámbito educativo". Reconocido internacionalmente por su trabajo sostenido en la enseñanza de una vida libre de drogas y alcohol.</p>
-        <p data-en>Professor Emeritus at the Universidad Pedagógica Experimental Libertador, Instituto Pedagógico de Caracas (UPEL-IPC), where he founded and coordinates the Cátedra Libre Antidrogas (CLIAD) and the accredited extension course "Drugs and Their Prevention in Education." Internationally recognized for his sustained work teaching a life free from drugs and alcohol.</p>
+        <p data-es>Profesor Emérito de la Universidad Pedagógica Experimental Libertador, Instituto Pedagógico de Caracas (UPEL-IPC), donde funda y coordina la Cátedra Libre Antidrogas (CLIAD) desde su creación el 25 de octubre de 2003, y la Actividad de Extensión Acreditable "Las drogas y su prevención desde el ámbito educativo". Reconocido internacionalmente por su trabajo sostenido en la enseñanza de una vida libre de drogas y alcohol.</p>
+        <p data-en>Professor Emeritus at the Universidad Pedagógica Experimental Libertador, Instituto Pedagógico de Caracas (UPEL-IPC), where he founded and has coordinated the Cátedra Libre Antidrogas (CLIAD) since its creation on October 25, 2003, along with the accredited extension course "Drugs and Their Prevention in Education." Internationally recognized for his sustained work teaching a life free from drugs and alcohol.</p>
       </div>
 
       <div style={{height: '1px', background: 'var(--line)', margin: '26px 0'}}></div>
 
-      <div className="founder-name" data-es>Dra. Guilliana Matute</div>
-      <div className="founder-name" data-en>Dr. Guilliana Matute</div>
+      <div className="founder-name" data-es>Dra. Giulliana Matute</div>
+      <div className="founder-name" data-en>Dr. Giulliana Matute</div>
       <div className="founder-role" data-es>Directora Internacional de la Cátedra</div>
       <div className="founder-role" data-en>International Director of the Chair</div>
       <div className="founder-bio">
@@ -382,10 +389,10 @@ export default function App() {
       <h2 style={{marginTop: '12px', fontSize: 'clamp(1.6rem,2.6vw,2.1rem)'}} data-es>De un salón de clases a millones de hogares</h2>
       <h2 style={{marginTop: '12px', fontSize: 'clamp(1.6rem,2.6vw,2.1rem)'}} data-en>From a classroom to millions of homes</h2>
       <p style={{color: 'var(--parchment-dim)', marginTop: '20px', fontSize: '0.98rem'}} data-es>
-        Durante décadas, el Profesor Matute formó a generaciones de estudiantes en Venezuela desde las aulas. Ahora, junto a la Dra. Guilliana Matute como Directora Internacional de la Cátedra, ese mismo conocimiento llega —gratis, bilingüe, y accesible desde cualquier lugar— a las comunidades de Estados Unidos donde el consumo de drogas y alcohol afecta a tantas familias, muchas de ellas hispanohablantes que no encuentran recursos en su propio idioma.
+        Durante décadas, el Profesor Matute formó a generaciones de estudiantes en Venezuela desde las aulas. Ahora, junto a la Dra. Giulliana Matute como Directora Internacional de la Cátedra, ese mismo conocimiento llega —gratis, bilingüe, y accesible desde cualquier lugar— a las comunidades de Estados Unidos donde el consumo de drogas y alcohol afecta a tantas familias, muchas de ellas hispanohablantes que no encuentran recursos en su propio idioma.
       </p>
       <p style={{color: 'var(--parchment-dim)', marginTop: '20px', fontSize: '0.98rem'}} data-en>
-        For decades, Professor Matute trained generations of students across Venezuela from the classroom. Now, alongside Dr. Guilliana Matute as International Director of the Chair, that same knowledge reaches — free, bilingual, and accessible from anywhere — communities across the United States where drug and alcohol use affects so many families, many of them Spanish-speaking and without resources in their own language.
+        For decades, Professor Matute trained generations of students across Venezuela from the classroom. Now, alongside Dr. Giulliana Matute as International Director of the Chair, that same knowledge reaches — free, bilingual, and accessible from anywhere — communities across the United States where drug and alcohol use affects so many families, many of them Spanish-speaking and without resources in their own language.
       </p>
       <div className="founder-quote" style={{marginTop: '32px'}}>
         <span data-es>"¡Sigamos trabajando en un mundo libre de drogas, desde el ámbito educativo!"</span>
@@ -448,8 +455,8 @@ export default function App() {
 
 <footer>
   <div className="wrap footer-row">
-    <p data-es>&copy; 2026 Vela Matute Institute — Un proyecto de Vela Salud, junto al Profesor Hernán Matute y la Dra. Guilliana Matute.</p>
-    <p data-en>&copy; 2026 Vela Matute Institute — A Vela Salud project, together with Professor Hernán Matute and Dr. Guilliana Matute.</p>
+    <p data-es>&copy; 2026 Vela Matute Institute — Un proyecto de Vela Salud, junto al Profesor Hernán Matute y la Dra. Giulliana Matute.</p>
+    <p data-en>&copy; 2026 Vela Matute Institute — A Vela Salud project, together with Professor Hernán Matute and Dr. Giulliana Matute.</p>
   </div>
 </footer>
 
