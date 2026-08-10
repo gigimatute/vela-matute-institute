@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neurotoxicidad y Deterioro Cognitivo en la Adicción | CLIAD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1C2B41;
+    --ink-soft:#33465F;
+    --parchment:#F6F2EA;
+    --card:#FFFDF9;
+    --teal:#2F6E62;
+    --teal-soft:#E4EEEB;
+    --amber:#B9772E;
+    --amber-soft:#F5E7D3;
+    --alert:#8B3A3A;
+    --alert-soft:#F3E2E0;
+    --line:#DDD4C2;
+    --text:#26221B;
+    --text-mute:#5B5648;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--parchment);
+    color:var(--text);
+    font-family:'Source Sans 3',sans-serif;
+    line-height:1.65;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces',serif;
+    color:var(--ink);
+    margin:0 0 .4em 0;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.72rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--teal);
+    font-weight:600;
+  }
+
+  /* ---------- HEADER ---------- */
+  .masthead{
+    background:linear-gradient(160deg,var(--ink) 0%,#233854 100%);
+    color:#F1EEE6;
+    padding:56px 24px 68px;
+    position:relative;
+    overflow:hidden;
+  }
+  .masthead::after{
+    content:"";
+    position:absolute;
+    right:-60px; top:-60px;
+    width:260px; height:260px;
+    border-radius:50%;
+    border:1px solid rgba(241,238,230,.14);
+  }
+  .masthead::before{
+    content:"";
+    position:absolute;
+    right:20px; bottom:-90px;
+    width:200px; height:200px;
+    border-radius:50%;
+    border:1px solid rgba(241,238,230,.1);
+  }
+  .masthead-inner{max-width:920px; margin:0 auto; position:relative; z-index:2;}
+  .masthead .eyebrow{color:#D9C7A6;}
+  .masthead h1{
+    color:#FBF9F4;
+    font-size:2.5rem;
+    font-weight:600;
+    margin-top:.5em;
+    max-width:15ch;
+  }
+  .masthead p.lead{
+    color:#C9D2DE;
+    font-size:1.05rem;
+    max-width:56ch;
+    margin-top:.6em;
+  }
+  .masthead-meta{
+    display:flex; flex-wrap:wrap; gap:28px;
+    margin-top:32px;
+    padding-top:20px;
+    border-top:1px solid rgba(241,238,230,.18);
+  }
+  .masthead-meta div{font-size:.85rem; color:#AEB9C9;}
+  .masthead-meta strong{display:block; color:#F1EEE6; font-family:'Fraunces',serif; font-size:1rem; font-weight:500;}
+
+  /* ---------- STICKY NAV ---------- */
+  .navbar{
+    position:sticky; top:0; z-index:50;
+    background:#FBF9F4;
+    border-bottom:1px solid var(--line);
+    overflow-x:auto;
+    white-space:nowrap;
+    box-shadow:0 2px 10px rgba(28,43,65,.06);
+  }
+  .navbar-inner{display:flex; max-width:920px; margin:0 auto;}
+  .navbar a{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.75rem;
+    letter-spacing:.04em;
+    text-decoration:none;
+    color:var(--ink-soft);
+    padding:16px 18px;
+    display:inline-block;
+    border-bottom:3px solid transparent;
+    transition:.15s;
+  }
+  .navbar a:hover{color:var(--teal); border-bottom-color:var(--teal-soft);}
+  .navbar a.active{color:var(--teal); border-bottom-color:var(--teal);}
+
+  /* ---------- LAYOUT ---------- */
+  main{max-width:920px; margin:0 auto; padding:48px 24px 90px;}
+  section{margin-bottom:64px; scroll-margin-top:64px;}
+  section h2{font-size:1.7rem; font-weight:600;}
+  .section-intro{color:var(--text-mute); max-width:64ch; margin-bottom:28px; font-size:1.02rem;}
+
+  /* ---------- CARDS ---------- */
+  .card-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+  @media(max-width:680px){.card-grid{grid-template-columns:1fr;}}
+  .mech-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:22px 22px 20px;
+    position:relative;
+  }
+  .mech-card .tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.68rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--teal);
+    font-weight:600;
+    display:block;
+    margin-bottom:8px;
+  }
+  .mech-card h3{font-size:1.12rem; font-weight:600; margin-bottom:8px;}
+  .mech-card p{color:var(--text-mute); font-size:.95rem; margin:0;}
+
+  /* ---------- PERLA ---------- */
+  .perla{
+    background:var(--amber-soft);
+    border-left:4px solid var(--amber);
+    border-radius:2px;
+    padding:18px 22px;
+    margin:28px 0;
+    position:relative;
+  }
+  .perla .perla-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.7rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--amber);
+    font-weight:700;
+    display:block;
+    margin-bottom:6px;
+  }
+  .perla p{margin:0; color:#4A3A20;}
+
+  .alert-box{
+    background:var(--alert-soft);
+    border-left:4px solid var(--alert);
+    border-radius:2px;
+    padding:18px 22px;
+    margin:28px 0;
+  }
+  .alert-box .perla-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.7rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--alert);
+    font-weight:700;
+    display:block;
+    margin-bottom:6px;
+  }
+  .alert-box p{margin:0; color:#4A2020;}
+
+  .clarify-box{
+    background:var(--teal-soft);
+    border-left:4px solid var(--teal);
+    border-radius:2px;
+    padding:22px 24px;
+    margin:24px 0;
+  }
+  .clarify-box .perla-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.7rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--teal);
+    font-weight:700;
+    display:block;
+    margin-bottom:6px;
+  }
+  .clarify-box p{margin:0 0 10px 0; color:#1F3B34;}
+  .clarify-box p:last-child{margin-bottom:0;}
+
+  /* ---------- PATHWAY DIAGRAM ---------- */
+  .pathway{
+    display:flex; align-items:stretch; gap:0;
+    margin:24px 0 8px;
+    overflow-x:auto;
+  }
+  .pathway-step{
+    flex:1 1 0;
+    min-width:150px;
+    background:var(--card);
+    border:1px solid var(--line);
+    padding:16px 14px;
+    text-align:center;
+    position:relative;
+  }
+  .pathway-step:not(:last-child)::after{
+    content:"→";
+    position:absolute;
+    right:-14px; top:50%;
+    transform:translateY(-50%);
+    color:var(--teal);
+    font-size:1.2rem;
+    z-index:2;
+    background:var(--parchment);
+    width:24px;
+  }
+  .pathway-step .n{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.68rem;
+    color:var(--teal);
+    font-weight:600;
+    display:block;
+    margin-bottom:6px;
+  }
+  .pathway-step p{margin:0; font-size:.86rem; color:var(--text-mute);}
+
+  /* ---------- TABLE ---------- */
+  table{width:100%; border-collapse:collapse; margin:20px 0; font-size:.92rem;}
+  th{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.7rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink);
+    text-align:left;
+    padding:10px 14px;
+    border-bottom:2px solid var(--ink);
+    background:var(--teal-soft);
+  }
+  td{padding:12px 14px; border-bottom:1px solid var(--line); vertical-align:top; color:var(--text);}
+  tr:last-child td{border-bottom:none;}
+  td.label{font-weight:600; color:var(--ink-soft); white-space:nowrap;}
+
+  /* ---------- REFLECTION LIST ---------- */
+  .reflect-list{list-style:none; padding:0; margin:0; counter-reset:reflect;}
+  .reflect-list li{
+    counter-increment:reflect;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:16px 20px 16px 56px;
+    margin-bottom:12px;
+    position:relative;
+  }
+  .reflect-list li::before{
+    content:counter(reflect);
+    position:absolute; left:18px; top:16px;
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    color:var(--teal);
+    font-size:1.1rem;
+  }
+
+  /* ---------- REFERENCES ---------- */
+  .ref-list{list-style:none; padding:0; margin:0;}
+  .ref-list li{
+    padding:12px 0;
+    border-bottom:1px solid var(--line);
+    font-size:.9rem;
+    color:var(--text-mute);
+  }
+  .ref-list li:last-child{border-bottom:none;}
+  .ref-list .src{font-weight:600; color:var(--ink-soft); font-family:'Source Sans 3',sans-serif;}
+
+  footer{
+    background:var(--ink);
+    color:#AEB9C9;
+    text-align:center;
+    padding:28px 24px;
+    font-size:.82rem;
+  }
+  footer strong{color:#F1EEE6;}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <span class="eyebrow">CLIAD · Cátedra Libre Antidrogas — UPEL-IPC · Biblioteca Educativa</span>
+    <h1>Neurotoxicidad y deterioro cognitivo en la adicción</h1>
+    <p class="lead">Mecanismos fisiopatológicos documentados en el consumo crónico de cocaína y heroína/opioides, con una aclaración conceptual sobre biología celular relevante para la educación en prevención.</p>
+    <div class="masthead-meta">
+      <div><strong>Dra. Guilliana Matute</strong>Directora Internacional, CLIAD</div>
+      <div><strong>Uso</strong>Material de referencia docente</div>
+      <div><strong>Nivel</strong>Educadores y personal de salud</div>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="#intro">Introducción</a>
+    <a href="#cocaina">Cocaína</a>
+    <a href="#heroina">Heroína / Opioides</a>
+    <a href="#comparacion">Comparación</a>
+    <a href="#nota">Nota Científica</a>
+    <a href="#educativa">Aplicación Educativa</a>
+    <a href="#referencias">Referencias</a>
+  </div>
+</nav>
+
+<main>
+
+  <section id="intro">
+    <span class="eyebrow">01 · Marco</span>
+    <h2>¿Por qué importa entender el mecanismo, no solo el efecto?</h2>
+    <p class="section-intro">
+      En la educación preventiva sobre drogas, es común transmitir que "las drogas dañan el cerebro" sin precisar cómo. Para un equipo docente con formación médica, conocer el mecanismo exacto permite construir mensajes creíbles, responder preguntas técnicas de estudiantes o familias, y evitar afirmaciones imprecisas que restan credibilidad a la cátedra. Este documento resume la evidencia fisiopatológica actual para cocaína y heroína/opioides, y aclara un punto de biología celular que se presta a confusión.
+    </p>
+  </section>
+
+  <section id="cocaina">
+    <span class="eyebrow">02 · Estimulante</span>
+    <h2>Cocaína: cuatro vías de daño convergente</h2>
+    <p class="section-intro">La cocaína no daña el cerebro por un solo mecanismo — el deterioro cognitivo observado en consumidores crónicos resulta de la superposición de al menos cuatro procesos.</p>
+
+    <div class="card-grid">
+      <div class="mech-card">
+        <span class="tag">Vascular</span>
+        <h3>Vasoconstricción e isquemia</h3>
+        <p>El bloqueo de la recaptación de dopamina, noradrenalina y serotonina genera vasoespasmo cerebral repetido. Con el consumo crónico esto produce microinfartos silentes y eventos isquémicos que se acumulan como un patrón similar a demencia vascular.</p>
+      </div>
+      <div class="mech-card">
+        <span class="tag">Sináptico</span>
+        <h3>Disfunción de circuitos mesocorticales</h3>
+        <p>La dopamina extrasináptica prolongada en la corteza prefrontal induce plasticidad sináptica desadaptativa. Esto altera de forma duradera los circuitos de recompensa y control cognitivo, incluso tras periodos largos de abstinencia.</p>
+      </div>
+      <div class="mech-card">
+        <span class="tag">Bioquímico</span>
+        <h3>Estrés oxidativo y disfunción mitocondrial</h3>
+        <p>Los metabolitos tóxicos de la cocaína cruzan la barrera hematoencefálica y generan especies reactivas de oxígeno, afectando especialmente corteza prefrontal y ganglios basales.</p>
+      </div>
+      <div class="mech-card">
+        <span class="tag">Funcional</span>
+        <h3>Disfunción ejecutiva prefrontal</h3>
+        <p>Clínicamente se traduce en déficits de memoria de trabajo, atención, planificación e inhibición de impulsos — el sustrato neurobiológico de la dificultad para controlar el consumo pese a las consecuencias.</p>
+      </div>
+    </div>
+
+    <div class="pathway">
+      <div class="pathway-step"><span class="n">01</span><p>Bloqueo de recaptación de monoaminas</p></div>
+      <div class="pathway-step"><span class="n">02</span><p>Vasoespasmo + hiperexcitabilidad neuronal</p></div>
+      <div class="pathway-step"><span class="n">03</span><p>Microisquemia + estrés oxidativo repetido</p></div>
+      <div class="pathway-step"><span class="n">04</span><p>Atrofia prefrontal / disfunción ejecutiva</p></div>
+    </div>
+
+    <div class="perla">
+      <span class="perla-label">Perla docente</span>
+      <p>El deterioro ejecutivo (planificación, inhibición, toma de decisiones) persiste con frecuencia durante la abstinencia. Esto es clínicamente relevante: explica por qué la recaída no depende solo de "voluntad" y refuerza el argumento de la adicción como condición médica con base neurobiológica.</p>
+    </div>
+  </section>
+
+  <section id="heroina">
+    <span class="eyebrow">03 · Opioide</span>
+    <h2>Heroína y opioides: la vía hipóxica y sus consecuencias diferidas</h2>
+    <p class="section-intro">A diferencia de la cocaína, el daño cognitivo por opioides está dominado por un mecanismo distinto: la hipoxia cerebral derivada de la depresión respiratoria — no todo el daño requiere una sobredosis clínicamente evidente.</p>
+
+    <div class="card-grid">
+      <div class="mech-card">
+        <span class="tag">Respiratorio</span>
+        <h3>Encefalopatía hipóxico-isquémica</h3>
+        <p>La depresión respiratoria (incluso episodios subclínicos y repetidos, no solo la sobredosis franca) causa caídas de oxígeno cerebral que dañan de forma preferente hipocampo, cerebelo y ganglios basales — regiones con alta vulnerabilidad a la hipoxia.</p>
+      </div>
+      <div class="mech-card">
+        <span class="tag">Tóxico</span>
+        <h3>Leucoencefalopatía tóxica ("chasing the dragon")</h3>
+        <p>Descrita clásicamente con la inhalación de vapores de heroína calentada. Produce desmielinización difusa de sustancia blanca con alteración del estado mental, ataxia cerebelosa e incontinencia — hallazgo documentado en series de casos desde 1982.</p>
+      </div>
+      <div class="mech-card">
+        <span class="tag">Diferido</span>
+        <h3>Leucoencefalopatía diferida (DPHL)</h3>
+        <p>Un patrón particularmente relevante para educación: pacientes que se recuperan de una sobredosis y parecen cognitivamente intactos pueden deteriorarse semanas después, con reaparición súbita de disfunción cognitiva y motora por desmielinización tardía.</p>
+      </div>
+      <div class="mech-card">
+        <span class="tag">Inflamatorio</span>
+        <h3>Neuroinflamación crónica</h3>
+        <p>La activación microglial sostenida contribuye al daño neuronal acumulativo en consumidores crónicos, independientemente de episodios agudos de hipoxia.</p>
+      </div>
+    </div>
+
+    <div class="pathway">
+      <div class="pathway-step"><span class="n">01</span><p>Depresión respiratoria (aguda o subclínica repetida)</p></div>
+      <div class="pathway-step"><span class="n">02</span><p>Hipoxia cerebral / caída de oxigenación</p></div>
+      <div class="pathway-step"><span class="n">03</span><p>Desmielinización de sustancia blanca</p></div>
+      <div class="pathway-step"><span class="n">04</span><p>Déficit cognitivo — a veces de aparición diferida</p></div>
+    </div>
+
+    <div class="alert-box">
+      <span class="perla-label">Relevancia clínica</span>
+      <p>El patrón diferido (DPHL) es un mensaje preventivo importante: un paciente que "se recuperó bien" de una sobredosis no está necesariamente fuera de riesgo neurológico. Vale la pena incluir esto en material educativo dirigido a familiares y personal de primera respuesta.</p>
+    </div>
+  </section>
+
+  <section id="comparacion">
+    <span class="eyebrow">04 · Síntesis</span>
+    <h2>Cocaína vs. heroína/opioides: comparación de mecanismos</h2>
+    <table>
+      <tr>
+        <th>Aspecto</th>
+        <th>Cocaína</th>
+        <th>Heroína / Opioides</th>
+      </tr>
+      <tr>
+        <td class="label">Mecanismo dominante</td>
+        <td>Vasoconstricción + excitotoxicidad + estrés oxidativo</td>
+        <td>Hipoxia cerebral por depresión respiratoria</td>
+      </tr>
+      <tr>
+        <td class="label">Región más afectada</td>
+        <td>Corteza prefrontal, ganglios basales</td>
+        <td>Sustancia blanca, hipocampo, cerebelo, ganglios basales</td>
+      </tr>
+      <tr>
+        <td class="label">Curso temporal típico</td>
+        <td>Acumulativo con el consumo crónico</td>
+        <td>Puede ser agudo, o diferido semanas después de un evento hipóxico</td>
+      </tr>
+      <tr>
+        <td class="label">Dominio cognitivo más afectado</td>
+        <td>Función ejecutiva, memoria de trabajo, control de impulsos</td>
+        <td>Estado mental global, función motora, memoria (según severidad)</td>
+      </tr>
+      <tr>
+        <td class="label">Reversibilidad</td>
+        <td>Parcial; algunos déficits persisten en abstinencia prolongada</td>
+        <td>Variable — desde recuperación completa hasta discapacidad permanente</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="nota">
+    <span class="eyebrow">05 · Precisión científica</span>
+    <h2>Nota conceptual: por qué la telomerasa NO explica este daño</h2>
+    <p class="section-intro">Este punto vale la pena aclararlo explícitamente en material docente, porque es un error conceptual fácil de cometer al mezclar biología celular con neurociencia de la adicción.</p>
+
+    <div class="clarify-box">
+      <span class="perla-label">Aclaración</span>
+      <p><strong>Las neuronas maduras son células permanentes (post-mitóticas):</strong> no se dividen en el cerebro adulto. La telomerasa protege los telómeros durante la división celular repetida — un mecanismo relevante en células lábiles (epitelio, médula ósea) o en cáncer, pero sin relación fisiológica con el daño neuronal directo en la adicción.</p>
+      <p>El deterioro cognitivo en consumidores de cocaína o heroína se explica por los mecanismos vasculares, excitotóxicos, hipóxicos y neuroinflamatorios descritos arriba — no por acortamiento telomérico neuronal.</p>
+      <p><strong>Dato aparte, útil como complemento:</strong> sí existe evidencia de telómeros más cortos en leucocitos de sangre periférica de personas con adicción crónica. Esto refleja envejecimiento biológico sistémico (estrés oxidativo, inflamación, cortisol elevado) — un biomarcador útil del desgaste corporal general de la adicción, pero un fenómeno distinto del daño cerebral en sí.</p>
+    </div>
+  </section>
+
+  <section id="educativa">
+    <span class="eyebrow">06 · Para la cátedra</span>
+    <h2>Aplicación en sesiones educativas y de prevención</h2>
+    <p class="section-intro">Preguntas de reflexión sugeridas para guiar discusión con estudiantes, docentes o familias en actividades de CLIAD.</p>
+    <ol class="reflect-list">
+      <li>¿Por qué explicar el <em>mecanismo</em> del daño (y no solo decir "hace daño") fortalece la credibilidad de un mensaje preventivo frente a adolescentes o jóvenes universitarios?</li>
+      <li>¿Cómo se explicaría, en lenguaje accesible, por qué alguien puede "verse bien" tras una sobredosis de opioides y aun así tener riesgo de deterioro neurológico semanas después?</li>
+      <li>¿Qué implicaciones tiene la persistencia de disfunción ejecutiva durante la abstinencia para el diseño de programas de rehabilitación y prevención de recaídas?</li>
+      <li>¿Qué diferencia hay entre comunicar "esto daña tu cerebro" (mensaje moralizante) y "esto es lo que ocurre fisiológicamente" (mensaje informado)? ¿Cuál genera más impacto educativo sostenido?</li>
+    </ol>
+  </section>
+
+  <section id="referencias">
+    <span class="eyebrow">07 · Fuentes consultadas</span>
+    <h2>Referencias</h2>
+    <ul class="ref-list">
+      <li><span class="src">Cocaine as a Neurotoxin</span> — Springer Nature Link. Revisión de mecanismos de disfunción cerebral inducida por cocaína: neurotransmisión dopaminérgica/glutamatérgica, estrés oxidativo y disfunción mitocondrial.</li>
+      <li><span class="src">Chronic cocaine disrupts mesocortical learning mechanisms</span> — ScienceDirect. Plasticidad desadaptativa en corteza prefrontal tras exposición crónica a cocaína.</li>
+      <li><span class="src">Cocaine and cognitive impairment: neuropsychological perspective</span> — NeuronUP. Síntesis de déficits en memoria, atención y función ejecutiva asociados al consumo crónico.</li>
+      <li><span class="src">Heroin-induced leukoencephalopathy: Chasing the imaging findings</span> — ScienceDirect. Hallazgos de neuroimagen en leucoencefalopatía por inhalación de heroína y su solapamiento con encefalopatía hipóxico-isquémica.</li>
+      <li><span class="src">Neurocognitive impairments and brain abnormalities resulting from opioid-related overdoses</span> — Revisión sistemática, PMC. Vínculo entre depresión respiratoria, hipoxia cerebral y leucoencefalopatía en sobredosis por opioides.</li>
+      <li><span class="src">Delayed Toxic-Hypoxic Leukoencephalopathy As Sequela of Opioid Overdose</span> — PMC. Descripción del curso bifásico de la leucoencefalopatía diferida post-hipóxica (síndrome de Grinker).</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  Documento de referencia elaborado para la biblioteca educativa de la <strong>Cátedra Libre Antidrogas (CLIAD) — UPEL-IPC</strong>.
+</footer>
+
+<script>
+  const links = document.querySelectorAll('.navbar a');
+  const sections = document.querySelectorAll('main section');
+  function setActive(){
+    let current = sections[0].id;
+    sections.forEach(sec=>{
+      const rect = sec.getBoundingClientRect();
+      if(rect.top <= 90) current = sec.id;
+    });
+    links.forEach(l=>{
+      l.classList.toggle('active', l.getAttribute('href') === '#'+current);
+    });
+  }
+  document.addEventListener('scroll', setActive);
+  setActive();
+</script>
+
+</body>
+</html>
