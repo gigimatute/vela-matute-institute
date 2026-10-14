@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 
 const SHEET_ID = ""; // <-- pega aquí el ID de tu Google Sheet cuando lo tengas listo
 
@@ -455,6 +456,7 @@ export default function App() {
   </div>
 </footer>
 
+<Analytics />
     </>
   )
 }
